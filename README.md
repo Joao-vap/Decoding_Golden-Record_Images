@@ -192,7 +192,7 @@ for folder in ('left', 'right'):
                 next_peak = np.argmax(text[peak+MARGIN:peak+SIZE_OF_SEARCH]) + peak + MARGIN
                 next_valley = np.argmin(text[next_peak:next_peak+RANGE_SEARCH_VALLEY]) + next_peak
                 # add section to matrix line with MATRIX_SIZE points
-                matrix = np.append(matrix, text[valley:next_valley]+[0]*(MATRIX_SIZE-(next_valley-valley)))
+                matrix = np.cdcdappend(matrix, text[valley:next_valley]+[0]*(MATRIX_SIZE-(next_valley-valley)))
                 # update peak
                 peak = next_peak
                 # update valley
@@ -206,7 +206,10 @@ for folder in ('left', 'right'):
 ```
 
 We get results of the type:
-
 ![image_80.png](README_data/image_80.png)
-
 ![image_22.png](README_data/image_22.png)
+
+But we can, as said, improve our results by moving the matplot tab. But again,
+not viable for all images, because it's extremely boring.
+![feto.png](README_data/feto.png)
+![terra.png](README_data/terra.png)
