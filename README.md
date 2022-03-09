@@ -213,3 +213,7 @@ But we can, as said, improve our results by moving the matplot tab. But again,
 not viable for all images, because it's extremely boring.
 ![feto.png](README_data/feto.png)
 ![terra.png](README_data/terra.png)
+
+ANother alternative is to use an downside margin to the image and resolve 
+the aspect ration necessary to get the image rigth. This approach was
+used in the last version in the source file.
