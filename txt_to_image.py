@@ -1,7 +1,6 @@
 #relevant imports
 import numpy as np
 import matplotlib.pyplot as plt
-from sympy import Matrix
 
 # global variables
 RANGE_FIRST_PEAK = 800 # range of the first peak
@@ -51,6 +50,6 @@ for folder in ('left', 'right'):
         matrix = np.append(matrix, [0]*(MATRIX_ROWS-matrix.shape[0]))
         matrix = matrix.reshape(-1,MATRIX_COLS) # reshape the matrix
         plt.imshow(matrix, cmap='Greys', interpolation='nearest', aspect=1.107) # plot the matrix
-        plt.savefig(f'images/{folder}/image_{i}.png', aspect='auto') # save the image
+        plt.savefig(f'images/{folder}/image_{i}.png') # save the image
         i += 1
         print(i) # print the number of the image so we can keep track of advances
